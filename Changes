@@ -1,5 +1,8 @@
 Revision history for Perl extension Audio::File.
 
+0.02  Thu Aug  5 19:02:21 2004
+	- fixed README
+
 0.01  Wed Aug  4 15:58:39 2004
 	- original version; created by h2xs 1.23 with options
 		-AXO -n Audio::File
