@@ -8,9 +8,9 @@ lib/Audio/File/AudioProperties.pm
 lib/Audio/File/Flac.pm
 lib/Audio/File/Flac/Tag.pm
 lib/Audio/File/Flac/AudioProperties.pm
-lib/Audio/File/MP3.pm
-lib/Audio/File/MP3/Tag.pm
-lib/Audio/File/MP3/AudioProperties.pm
+lib/Audio/File/Mp3.pm
+lib/Audio/File/Mp3/Tag.pm
+lib/Audio/File/Mp3/AudioProperties.pm
 lib/Audio/File/Ogg.pm
 lib/Audio/File/Ogg/Tag.pm
 lib/Audio/File/Ogg/AudioProperties.pm

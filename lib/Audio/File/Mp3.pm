@@ -6,7 +6,7 @@ use base qw( Audio::File::Type );
 use Audio::File::MP3::Tag;
 use Audio::File::MP3::AudioProperties;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub init {
 	my $self = shift;

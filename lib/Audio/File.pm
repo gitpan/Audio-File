@@ -3,7 +3,7 @@ package Audio::File;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
@@ -74,13 +74,16 @@ sub _create {
 
 =over 4
 
-=item Add possibility to access raw audio data (Audio::File::Data)
+=item * Add possibility to change file and its tags.
+
+=item * better (easier) interface?
+
+=item * user shouldn't be forced to use Audio::File if he only want's the files
+tag or audio properties.
+
+=item * Add possibility to access raw audio data (Audio::File::Data)
 
 That could be done via Audio::Data or equivalent.
-
-=item Add possibility to change file and its tags.
-
-=item better (easier) interface?
 
 =back
 

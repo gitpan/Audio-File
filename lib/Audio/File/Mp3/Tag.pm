@@ -5,6 +5,8 @@ use warnings;
 use base qw( Audio::File::Tag );
 use MP3::Tag;
 
+our $VERSION = '0.02';
+
 sub init {
 	my $self = shift;
 	$self->{mp3} = MP3::Tag->new( $self->{filename} ) or return;

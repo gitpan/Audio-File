@@ -5,6 +5,8 @@ use warnings;
 use base qw( Audio::File::AudioProperties );
 use MP3::Info;
 
+our $VERSION = '0.02';
+
 sub init {
 	my $self = shift;
 	my $info = get_mp3info( $self->{filename} ) or return;
