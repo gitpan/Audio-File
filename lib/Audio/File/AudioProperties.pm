@@ -59,7 +59,7 @@ sub length {
 		return 1;
 	}
 
-	return $self->{length};
+	return int $self->{length};
 }
 
 =head2 bitrate
@@ -75,7 +75,7 @@ sub bitrate {
 		return 1;
 	}
 
-	return $self->{bitrate};
+	return int $self->{bitrate};
 }
 
 =head2 sample_rate

@@ -3,7 +3,7 @@ package Audio::File::Tag;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -50,7 +50,7 @@ sub init {
 Using title() you can get or set the tags title field. If called without any
 argument it'll return the current content of the title field. If you call
 title() with an scalar argument it will set the title field to what the argument
-contains. The methods artist(), album(), comment(), genre(), year() and track()
+contains. The methods artist(), album(), comment(), genre(), year(), track() and total()
 are called in the same way.
 
 =cut
@@ -158,9 +158,25 @@ sub track {
 		$self->{track} = shift;
 		return 1;
 	}
+	
+	return $self->{track} + 0;
 
-	return $self->{track};
+}
 
+=head2 total
+
+Set/get the total number of tracks
+
+=cut
+
+sub total {
+	my $self = shift;
+	if ( @_ ) {
+		$self->{total} = shift;
+		return 1;
+	}
+
+	return $self->{total} + 0;
 }
 
 =head2 is_empty

@@ -2,7 +2,12 @@ Changes
 Makefile.PL
 MANIFEST
 README
-t/Audio-File.t
+t/Flac.t
+t/Mp3.t
+t/Ogg.t
+t/test.flac
+t/test.mp3
+t/test.ogg
 lib/Audio/File.pm
 lib/Audio/File/AudioProperties.pm
 lib/Audio/File/Flac.pm
@@ -16,3 +21,4 @@ lib/Audio/File/Ogg/Tag.pm
 lib/Audio/File/Ogg/AudioProperties.pm
 lib/Audio/File/Tag.pm
 lib/Audio/File/Type.pm
+META.yml                                 Module meta-data (added by MakeMaker)

@@ -5,7 +5,7 @@ use warnings;
 use base qw( Audio::File::Tag );
 use Audio::FLAC;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub init {
 	my $self = shift;
@@ -15,10 +15,11 @@ sub init {
 	$self->title(	$flactag->{TITLE}		);
 	$self->artist(	$flactag->{ARTIST}		);
 	$self->album(	$flactag->{ALBUM}		);
-	$self->comment(	$flactag->{COMMENT}		);
+	$self->comment(	$flactag->{DESCRIPTION}	);
 	$self->genre(	$flactag->{GENRE}		);
 	$self->year(	$flactag->{DATE}		);
 	$self->track(	$flactag->{TRACKNUMBER}	);
+	$self->total(	$flactag->{TRACKTOTAL}	);
 
 	return 1;
 }
