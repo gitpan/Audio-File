@@ -3,7 +3,7 @@ package Audio::File::Type;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -50,6 +50,14 @@ sub init {
 
 }
 
+sub _create_tag {
+
+}
+
+sub _create_audio_properties {
+
+}
+
 =head2 name
 
 Returns the name of the audio file.
@@ -91,7 +99,12 @@ L<Audio::File::Tag> to learn about what the tag object does.
 =cut
 
 sub tag {
-	return shift->{tag};
+	my $self = shift;
+	unless( $self->{tag} ) {
+		$self->_create_tag() or return;
+	}
+
+	return $self->{tag};
 }
 
 =head2 audio_properties
@@ -103,7 +116,12 @@ properties object does.
 =cut
 
 sub audio_properties {
-	return shift->{audio_properties};
+	my $self = shift;
+	unless( $self->{audio_properties} ) {
+		$self->_create_audio_properties() or return;
+	}
+	
+	return $self->{audio_properties};
 }
 
 =head2 save
