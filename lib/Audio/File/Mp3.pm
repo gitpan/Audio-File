@@ -3,10 +3,10 @@ package Audio::File::Mp3;
 use strict;
 use warnings;
 use base qw( Audio::File::Type );
-use Audio::File::MP3::Tag;
-use Audio::File::MP3::AudioProperties;
+use Audio::File::Mp3::Tag;
+use Audio::File::Mp3::AudioProperties;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub init {
 	my $self = shift;

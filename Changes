@@ -1,5 +1,9 @@
 Revision history for Perl extension Audio::File.
 
+0.05  Sat Aug 21 01:31:12 2004
+	- yet another damn typo! I really should start testing *before* releasing a
+	  new version..
+
 0.04  Sat Aug 21 01:25:32 2004
 	- fixed typos of previous fix.
 
