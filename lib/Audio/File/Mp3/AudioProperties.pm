@@ -1,11 +1,11 @@
-package Audio::File::MP3::AudioProperties;
+package Audio::File::Mp3::AudioProperties;
 
 use strict;
 use warnings;
 use base qw( Audio::File::AudioProperties );
 use MP3::Info;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub init {
 	my $self = shift;

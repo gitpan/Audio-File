@@ -1,11 +1,11 @@
-package Audio::File::MP3::Tag;
+package Audio::File::Mp3::Tag;
 
 use strict;
 use warnings;
 use base qw( Audio::File::Tag );
 use MP3::Tag;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub init {
 	my $self = shift;

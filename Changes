@@ -1,5 +1,8 @@
 Revision history for Perl extension Audio::File.
 
+0.04  Sat Aug 21 01:25:32 2004
+	- fixed typos of previous fix.
+
 0.03  Sat Aug 21 01:18:45 2004
 	- fixed Mp3 suppport.
 
