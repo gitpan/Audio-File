@@ -3,7 +3,7 @@ package Audio::File::Tag;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
@@ -165,7 +165,7 @@ sub track {
 
 =head2 total
 
-Set/get the total number of tracks
+Set/get the total number of tracks.
 
 =cut
 
@@ -177,6 +177,35 @@ sub total {
 	}
 
 	return $self->{total} + 0;
+}
+
+=head2 all
+
+Set/get all tags. To set the tags pass a hash reference with the names of the
+tags as keys and the tag values as hash values. Returns a hash reference if no
+argument is specified.
+
+=cut
+
+sub all {
+	my $self = shift;
+
+	if (@_) {
+		my $tags = shift;
+		$self->$_($tags->{$_}) for keys %{$tags};
+		return 1;
+	}
+
+	return {
+		title	=> $self->title(),
+		artist	=> $self->artist(),
+		album	=> $self->album(),
+		comment	=> $self->comment(),
+		genre	=> $self->genre(),
+		year	=> $self->year(),
+		track	=> $self->track(),
+		total	=> $self->total()
+	};
 }
 
 =head2 is_empty
@@ -193,7 +222,8 @@ sub is_empty {
 			$self->comment() &&
 			$self->genre() &&
 			$self->year() &&
-			$self->track() );
+			$self->track() &&
+			$self->total());
 }
 
 =head2 save

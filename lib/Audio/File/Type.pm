@@ -50,13 +50,9 @@ sub init {
 
 }
 
-sub _create_tag {
+sub _create_tag { }
 
-}
-
-sub _create_audio_properties {
-
-}
+sub _create_audio_properties { }
 
 =head2 name
 

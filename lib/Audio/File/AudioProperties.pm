@@ -3,7 +3,7 @@ package Audio::File::AudioProperties;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -108,6 +108,29 @@ sub channels {
 	}
 
 	return $self->{channels};
+}
+
+=head2 all
+
+Get all audio properties.
+
+=cut
+
+sub all {
+	my $self = shift;
+
+	if (@_) {
+		my $props = shift;
+		$self->$_($props->{$_}) for keys %{$props};
+		return 1;
+	}
+
+	return {
+		length		=> $self->length(),
+		bitrate		=> $self->bitrate(),
+		sample_rate	=> $self->sample_rate(),
+		channels	=> $self->channels()
+	};
 }
 
 1;

@@ -3,13 +3,13 @@ package Audio::File::Flac::Tag;
 use strict;
 use warnings;
 use base qw( Audio::File::Tag );
-use Audio::FLAC;
+use Audio::FLAC::Header
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub init {
 	my $self = shift;
-	$self->{flac} = Audio::FLAC->new( $self->{filename} ) or return;
+	$self->{flac} = Audio::FLAC::Header->new( $self->{filename} ) or return;
 	my $flactag = $self->{flac}->tags();
 
 	$self->title(	$flactag->{TITLE}		);

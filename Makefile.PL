@@ -5,7 +5,7 @@ WriteMakefile(
     NAME              => 'Audio::File',
     VERSION_FROM      => 'lib/Audio/File.pm', # finds $VERSION
     PREREQ_PM         => {
-			'Audio::FLAC'					=> 0,
+			'Audio::FLAC::Header'			=> 0,
 			'Ogg::Vorbis::Header::PurePerl'	=> 0,
 			'MP3::Info'						=> 0,
 			'MP3::Tag'						=> 0,

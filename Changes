@@ -1,5 +1,11 @@
 Revision history for Perl extension Audio::File.
 
+0.10  Mon Feb 28 16:03:12 2005
+	- Better test suite.
+	- Added Audio::File::Tag::all().
+	- Added Audio::File::AudioProperties::all().
+	- Audio::FLAC -> Audio::FLAC::Header.
+
 0.09  Fri Feb 18 00:20:08 2005
 	- Fixed README.
 	- Removed 'use 5.008004;' from Makefile.PL.
