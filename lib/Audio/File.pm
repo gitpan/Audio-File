@@ -3,7 +3,7 @@ package Audio::File;
 use strict;
 use warnings;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 =head1 NAME
 
@@ -22,9 +22,12 @@ Audio::File - Audio file abstraction library
 
 =head1 DESCRIPTION
 
-Audio::File abstracts a single audio file.
+Audio::File abstracts a single audio file, independant of its format. Using this
+module you can access a files meta-info like title, album, etc. as well as the
+files audio-properties like its length and bitrate.
 
-TODO
+Currently only the formats flac, ogg vorbis and mp3 are supported, but support
+for other formats may be easily added.
 
 =head1 METHODS
 
