@@ -1,0 +1,8 @@
+Revision history for Perl extension Audio::File.
+
+0.01  Wed Aug  4 15:58:39 2004
+	- original version; created by h2xs 1.23 with options
+		-AXO -n Audio::File
+	- implemented basic functionality of reading tags and audio properties for
+	  Flac, Ogg and MP3.
+
