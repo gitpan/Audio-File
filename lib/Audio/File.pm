@@ -3,7 +3,7 @@ package Audio::File;
 use strict;
 use warnings;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 =head1 NAME
 
@@ -58,17 +58,15 @@ sub new {
 sub _create {
 	my($self, $filename) = @_;
 	
-	if( length($filename) > 4 ) {
-		(my $type = $filename) =~ s/.*\.//;
-		$type = ucfirst lc $type;
+	return unless length($filename) > 4;
 
-		eval "require Audio::File::$type";
-		unless( $@ ) {
-			return "Audio::File::$type"->new( $filename );
-		}
-	}
+	(my $type = $filename) =~ s/.*\.//;
+	$type = ucfirst lc $type;
+	return unless $type;
 
-	return;
+	my $loaded = 0;
+	eval "require Audio::File::$type; \$loaded = 1;";
+	return "Audio::File::$type"->new( $filename ) if $loaded;
 }
 
 1;

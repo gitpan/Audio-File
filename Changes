@@ -1,5 +1,8 @@
 Revision history for Perl extension Audio::File.
 
+0.08  Tue Sep 14 07:45:37 2004
+	- Fixed problems when loading type-secific plugins using eval in File.pm.
+
 0.06  Mon Aug 30 01:24:26 2004
 	- Added a better description.
 
