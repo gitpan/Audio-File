@@ -1,5 +1,8 @@
 Revision history for Perl extension Audio::File.
 
+0.11  Fri Aug 25 15:21:22 2006
+	- Fix a test failure in the mp3 tag tests.
+
 0.10  Mon Feb 28 16:03:12 2005
 	- Better test suite.
 	- Added Audio::File::Tag::all().
